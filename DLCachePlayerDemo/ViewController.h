@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DLCachePlayer.h"
 
-@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController<DLCachePlayerDataDelegate, DLCachePlayerStateDelegate, UITableViewDelegate, UITableViewDataSource>
 
+- (IBAction)btnPlayPause_Clicked:(id)sender;
 
 @end
 
