@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F5EF2E621005474009259BB /* 1. sayonara memories.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F5EF2E521005474009259BB /* 1. sayonara memories.mp3 */; };
+		4F5EF2EA21005504009259BB /* 4. The Glory Days.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F5EF2E721005504009259BB /* 4. The Glory Days.mp3 */; };
+		4F5EF2EB21005504009259BB /* 3. Departures (Anata ni Okuru Ai no Uta).m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4F5EF2E821005504009259BB /* 3. Departures (Anata ni Okuru Ai no Uta).m4a */; };
+		4F5EF2EC21005504009259BB /* 2. kare.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4F5EF2E921005504009259BB /* 2. kare.m4a */; };
 		4FF6902B2100347500892BFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6902A2100347500892BFF /* AppDelegate.m */; };
 		4FF6902E2100347500892BFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6902D2100347500892BFF /* ViewController.m */; };
 		4FF690312100347500892BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF6902F2100347500892BFF /* Main.storyboard */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F5EF2E521005474009259BB /* 1. sayonara memories.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1. sayonara memories.mp3"; sourceTree = "<group>"; };
+		4F5EF2E721005504009259BB /* 4. The Glory Days.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "4. The Glory Days.mp3"; sourceTree = "<group>"; };
+		4F5EF2E821005504009259BB /* 3. Departures (Anata ni Okuru Ai no Uta).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "3. Departures (Anata ni Okuru Ai no Uta).m4a"; sourceTree = "<group>"; };
+		4F5EF2E921005504009259BB /* 2. kare.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2. kare.m4a"; sourceTree = "<group>"; };
 		4FF690262100347500892BFF /* DLCachePlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLCachePlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF690292100347500892BFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FF6902A2100347500892BFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +98,10 @@
 		4F5EF2E421004446009259BB /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				4F5EF2E521005474009259BB /* 1. sayonara memories.mp3 */,
+				4F5EF2E921005504009259BB /* 2. kare.m4a */,
+				4F5EF2E821005504009259BB /* 3. Departures (Anata ni Okuru Ai no Uta).m4a */,
+				4F5EF2E721005504009259BB /* 4. The Glory Days.mp3 */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -266,8 +278,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5EF2E621005474009259BB /* 1. sayonara memories.mp3 in Resources */,
+				4F5EF2EC21005504009259BB /* 2. kare.m4a in Resources */,
+				4F5EF2EA21005504009259BB /* 4. The Glory Days.mp3 in Resources */,
 				4FF690362100347700892BFF /* LaunchScreen.storyboard in Resources */,
 				4FF690332100347700892BFF /* Assets.xcassets in Resources */,
+				4F5EF2EB21005504009259BB /* 3. Departures (Anata ni Okuru Ai no Uta).m4a in Resources */,
 				4FF690312100347500892BFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
