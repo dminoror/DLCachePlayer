@@ -37,26 +37,70 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="IwT-Cy-lWr"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKd-CP-gPP">
-                                <rect key="frame" x="164" y="480" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKd-CP-gPP">
+                                <rect key="frame" x="157" y="388.5" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ypc-DR-juQ"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <state key="selected" title="Pause"/>
                                 <connections>
                                     <action selector="btnPlayPause_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2nX-mv-bMv"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9u7-Dc-Q7G" customClass="DLProgressSlider">
+                                <rect key="frame" x="8" y="328.5" width="359" height="31"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="progressBar_Changed:" destination="BYZ-38-t0r" eventType="valueChanged" id="MTt-FY-Ovw"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQO-cz-mER">
+                                <rect key="frame" x="97" y="388" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1wc-MD-tjN"/>
+                                </constraints>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="btnPrev_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5V3-0V-BAO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAq-Y1-yBt">
+                                <rect key="frame" x="237" y="388" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ZCj-jO-Gwq"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="btnNext_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="819-MG-nup"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="sAq-Y1-yBt" firstAttribute="centerY" secondItem="kKd-CP-gPP" secondAttribute="centerY" id="0Dz-bi-cnK"/>
                             <constraint firstItem="4o3-NM-wtW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1wi-FW-ij3"/>
+                            <constraint firstItem="9u7-Dc-Q7G" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2kx-gq-FAB"/>
+                            <constraint firstItem="kKd-CP-gPP" firstAttribute="centerX" secondItem="9u7-Dc-Q7G" secondAttribute="centerX" id="4ru-Ma-Had"/>
+                            <constraint firstItem="sAq-Y1-yBt" firstAttribute="leading" secondItem="kKd-CP-gPP" secondAttribute="trailing" constant="20" id="8nL-Og-VRY"/>
+                            <constraint firstItem="kKd-CP-gPP" firstAttribute="leading" secondItem="DQO-cz-mER" secondAttribute="trailing" constant="20" id="FtI-u3-HEg"/>
+                            <constraint firstItem="DQO-cz-mER" firstAttribute="centerY" secondItem="kKd-CP-gPP" secondAttribute="centerY" id="Hmo-Kn-k9B"/>
+                            <constraint firstItem="9u7-Dc-Q7G" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-20" id="N0w-jc-9h7"/>
+                            <constraint firstItem="kKd-CP-gPP" firstAttribute="top" secondItem="9u7-Dc-Q7G" secondAttribute="bottom" constant="30" id="Tm5-TB-ee7"/>
                             <constraint firstItem="4o3-NM-wtW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="V17-vA-XCr"/>
+                            <constraint firstItem="9u7-Dc-Q7G" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vjs-nr-tEY"/>
                             <constraint firstItem="4o3-NM-wtW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xl4-BZ-INj"/>
                             <constraint firstItem="4o3-NM-wtW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="p48-Sk-ogQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnNext" destination="sAq-Y1-yBt" id="Vlr-9X-64t"/>
+                        <outlet property="btnPlayPause" destination="kKd-CP-gPP" id="cWg-6l-nr2"/>
+                        <outlet property="btnPrev" destination="DQO-cz-mER" id="EHq-P0-2f7"/>
                         <outlet property="musicTable" destination="4o3-NM-wtW" id="bIh-rw-wZf"/>
+                        <outlet property="progressBar" destination="9u7-Dc-Q7G" id="gVp-ie-GKD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
