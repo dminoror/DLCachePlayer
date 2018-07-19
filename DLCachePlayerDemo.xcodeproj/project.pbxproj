@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FF6902B2100347500892BFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6902A2100347500892BFF /* AppDelegate.m */; };
+		4FF6902E2100347500892BFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6902D2100347500892BFF /* ViewController.m */; };
+		4FF690312100347500892BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF6902F2100347500892BFF /* Main.storyboard */; };
+		4FF690332100347700892BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF690322100347700892BFF /* Assets.xcassets */; };
+		4FF690362100347700892BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF690342100347700892BFF /* LaunchScreen.storyboard */; };
+		4FF690392100347700892BFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF690382100347700892BFF /* main.m */; };
+		4FF690432100347700892BFF /* DLCachePlayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF690422100347700892BFF /* DLCachePlayerDemoTests.m */; };
+		4FF6904E2100347700892BFF /* DLCachePlayerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6904D2100347700892BFF /* DLCachePlayerDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FF6903F2100347700892BFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF6901E2100347500892BFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FF690252100347500892BFF;
+			remoteInfo = DLCachePlayerDemo;
+		};
+		4FF6904A2100347700892BFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF6901E2100347500892BFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FF690252100347500892BFF;
+			remoteInfo = DLCachePlayerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4FF690262100347500892BFF /* DLCachePlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLCachePlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF690292100347500892BFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4FF6902A2100347500892BFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4FF6902C2100347500892BFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4FF6902D2100347500892BFF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4FF690302100347500892BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4FF690322100347700892BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FF690352100347700892BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4FF690372100347700892BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF690382100347700892BFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4FF6903E2100347700892BFF /* DLCachePlayerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLCachePlayerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF690422100347700892BFF /* DLCachePlayerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCachePlayerDemoTests.m; sourceTree = "<group>"; };
+		4FF690442100347700892BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF690492100347700892BFF /* DLCachePlayerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLCachePlayerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF6904D2100347700892BFF /* DLCachePlayerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCachePlayerDemoUITests.m; sourceTree = "<group>"; };
+		4FF6904F2100347700892BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FF690232100347500892BFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF6903B2100347700892BFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF690462100347700892BFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FF6901D2100347500892BFF = {
+			isa = PBXGroup;
+			children = (
+				4FF690282100347500892BFF /* DLCachePlayerDemo */,
+				4FF690412100347700892BFF /* DLCachePlayerDemoTests */,
+				4FF6904C2100347700892BFF /* DLCachePlayerDemoUITests */,
+				4FF690272100347500892BFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FF690272100347500892BFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FF690262100347500892BFF /* DLCachePlayerDemo.app */,
+				4FF6903E2100347700892BFF /* DLCachePlayerDemoTests.xctest */,
+				4FF690492100347700892BFF /* DLCachePlayerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FF690282100347500892BFF /* DLCachePlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4FF690292100347500892BFF /* AppDelegate.h */,
+				4FF6902A2100347500892BFF /* AppDelegate.m */,
+				4FF6902C2100347500892BFF /* ViewController.h */,
+				4FF6902D2100347500892BFF /* ViewController.m */,
+				4FF6902F2100347500892BFF /* Main.storyboard */,
+				4FF690322100347700892BFF /* Assets.xcassets */,
+				4FF690342100347700892BFF /* LaunchScreen.storyboard */,
+				4FF690372100347700892BFF /* Info.plist */,
+				4FF690382100347700892BFF /* main.m */,
+			);
+			path = DLCachePlayerDemo;
+			sourceTree = "<group>";
+		};
+		4FF690412100347700892BFF /* DLCachePlayerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FF690422100347700892BFF /* DLCachePlayerDemoTests.m */,
+				4FF690442100347700892BFF /* Info.plist */,
+			);
+			path = DLCachePlayerDemoTests;
+			sourceTree = "<group>";
+		};
+		4FF6904C2100347700892BFF /* DLCachePlayerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4FF6904D2100347700892BFF /* DLCachePlayerDemoUITests.m */,
+				4FF6904F2100347700892BFF /* Info.plist */,
+			);
+			path = DLCachePlayerDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FF690252100347500892BFF /* DLCachePlayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF690522100347700892BFF /* Build configuration list for PBXNativeTarget "DLCachePlayerDemo" */;
+			buildPhases = (
+				4FF690222100347500892BFF /* Sources */,
+				4FF690232100347500892BFF /* Frameworks */,
+				4FF690242100347500892BFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLCachePlayerDemo;
+			productName = DLCachePlayerDemo;
+			productReference = 4FF690262100347500892BFF /* DLCachePlayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4FF6903D2100347700892BFF /* DLCachePlayerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF690552100347700892BFF /* Build configuration list for PBXNativeTarget "DLCachePlayerDemoTests" */;
+			buildPhases = (
+				4FF6903A2100347700892BFF /* Sources */,
+				4FF6903B2100347700892BFF /* Frameworks */,
+				4FF6903C2100347700892BFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FF690402100347700892BFF /* PBXTargetDependency */,
+			);
+			name = DLCachePlayerDemoTests;
+			productName = DLCachePlayerDemoTests;
+			productReference = 4FF6903E2100347700892BFF /* DLCachePlayerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4FF690482100347700892BFF /* DLCachePlayerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF690582100347700892BFF /* Build configuration list for PBXNativeTarget "DLCachePlayerDemoUITests" */;
+			buildPhases = (
+				4FF690452100347700892BFF /* Sources */,
+				4FF690462100347700892BFF /* Frameworks */,
+				4FF690472100347700892BFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FF6904B2100347700892BFF /* PBXTargetDependency */,
+			);
+			name = DLCachePlayerDemoUITests;
+			productName = DLCachePlayerDemoUITests;
+			productReference = 4FF690492100347700892BFF /* DLCachePlayerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FF6901E2100347500892BFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = DoubleLight;
+				TargetAttributes = {
+					4FF690252100347500892BFF = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					4FF6903D2100347700892BFF = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 4FF690252100347500892BFF;
+					};
+					4FF690482100347700892BFF = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 4FF690252100347500892BFF;
+					};
+				};
+			};
+			buildConfigurationList = 4FF690212100347500892BFF /* Build configuration list for PBXProject "DLCachePlayerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4FF6901D2100347500892BFF;
+			productRefGroup = 4FF690272100347500892BFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FF690252100347500892BFF /* DLCachePlayerDemo */,
+				4FF6903D2100347700892BFF /* DLCachePlayerDemoTests */,
+				4FF690482100347700892BFF /* DLCachePlayerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FF690242100347500892BFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF690362100347700892BFF /* LaunchScreen.storyboard in Resources */,
+				4FF690332100347700892BFF /* Assets.xcassets in Resources */,
+				4FF690312100347500892BFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF6903C2100347700892BFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF690472100347700892BFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FF690222100347500892BFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF6902E2100347500892BFF /* ViewController.m in Sources */,
+				4FF690392100347700892BFF /* main.m in Sources */,
+				4FF6902B2100347500892BFF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF6903A2100347700892BFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF690432100347700892BFF /* DLCachePlayerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF690452100347700892BFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF6904E2100347700892BFF /* DLCachePlayerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FF690402100347700892BFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FF690252100347500892BFF /* DLCachePlayerDemo */;
+			targetProxy = 4FF6903F2100347700892BFF /* PBXContainerItemProxy */;
+		};
+		4FF6904B2100347700892BFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FF690252100347500892BFF /* DLCachePlayerDemo */;
+			targetProxy = 4FF6904A2100347700892BFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4FF6902F2100347500892BFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF690302100347500892BFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4FF690342100347700892BFF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF690352100347700892BFF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4FF690502100347700892BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4FF690512100347700892BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FF690532100347700892BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43SJ8NLZH6;
+				INFOPLIST_FILE = DLCachePlayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DoubleLight.DLCachePlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FF690542100347700892BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43SJ8NLZH6;
+				INFOPLIST_FILE = DLCachePlayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DoubleLight.DLCachePlayerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4FF690562100347700892BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43SJ8NLZH6;
+				INFOPLIST_FILE = DLCachePlayerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DoubleLight.DLCachePlayerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DLCachePlayerDemo.app/DLCachePlayerDemo";
+			};
+			name = Debug;
+		};
+		4FF690572100347700892BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43SJ8NLZH6;
+				INFOPLIST_FILE = DLCachePlayerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DoubleLight.DLCachePlayerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DLCachePlayerDemo.app/DLCachePlayerDemo";
+			};
+			name = Release;
+		};
+		4FF690592100347700892BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43SJ8NLZH6;
+				INFOPLIST_FILE = DLCachePlayerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DoubleLight.DLCachePlayerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DLCachePlayerDemo;
+			};
+			name = Debug;
+		};
+		4FF6905A2100347700892BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 43SJ8NLZH6;
+				INFOPLIST_FILE = DLCachePlayerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DoubleLight.DLCachePlayerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DLCachePlayerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FF690212100347500892BFF /* Build configuration list for PBXProject "DLCachePlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF690502100347700892BFF /* Debug */,
+				4FF690512100347700892BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF690522100347700892BFF /* Build configuration list for PBXNativeTarget "DLCachePlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF690532100347700892BFF /* Debug */,
+				4FF690542100347700892BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF690552100347700892BFF /* Build configuration list for PBXNativeTarget "DLCachePlayerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF690562100347700892BFF /* Debug */,
+				4FF690572100347700892BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF690582100347700892BFF /* Build configuration list for PBXNativeTarget "DLCachePlayerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF690592100347700892BFF /* Debug */,
+				4FF6905A2100347700892BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FF6901E2100347500892BFF /* Project object */;
+}
