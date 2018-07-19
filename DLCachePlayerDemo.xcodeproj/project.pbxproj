@@ -15,6 +15,9 @@
 		4FF690392100347700892BFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF690382100347700892BFF /* main.m */; };
 		4FF690432100347700892BFF /* DLCachePlayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF690422100347700892BFF /* DLCachePlayerDemoTests.m */; };
 		4FF6904E2100347700892BFF /* DLCachePlayerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6904D2100347700892BFF /* DLCachePlayerDemoUITests.m */; };
+		4FF69062210034BB00892BFF /* DLCachePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6905C210034BA00892BFF /* DLCachePlayer.m */; };
+		4FF69063210034BB00892BFF /* DLProgressSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6905E210034BB00892BFF /* DLProgressSlider.m */; };
+		4FF69064210034BB00892BFF /* DLResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF69061210034BB00892BFF /* DLResourceLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		4FF690492100347700892BFF /* DLCachePlayerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLCachePlayerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF6904D2100347700892BFF /* DLCachePlayerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCachePlayerDemoUITests.m; sourceTree = "<group>"; };
 		4FF6904F2100347700892BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF6905C210034BA00892BFF /* DLCachePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLCachePlayer.m; path = DLCachePlayerDemo/DLCachePlayer/DLCachePlayer.m; sourceTree = SOURCE_ROOT; };
+		4FF6905D210034BB00892BFF /* DLCachePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLCachePlayer.h; path = DLCachePlayerDemo/DLCachePlayer/DLCachePlayer.h; sourceTree = SOURCE_ROOT; };
+		4FF6905E210034BB00892BFF /* DLProgressSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLProgressSlider.m; path = DLCachePlayerDemo/DLCachePlayer/DLProgressSlider.m; sourceTree = SOURCE_ROOT; };
+		4FF6905F210034BB00892BFF /* DLProgressSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLProgressSlider.h; path = DLCachePlayerDemo/DLCachePlayer/DLProgressSlider.h; sourceTree = SOURCE_ROOT; };
+		4FF69060210034BB00892BFF /* DLResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLResourceLoader.h; path = DLCachePlayerDemo/DLCachePlayer/DLResourceLoader.h; sourceTree = SOURCE_ROOT; };
+		4FF69061210034BB00892BFF /* DLResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLResourceLoader.m; path = DLCachePlayerDemo/DLCachePlayer/DLResourceLoader.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		4FF690282100347500892BFF /* DLCachePlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4FF6905B210034A500892BFF /* DLCachePlayer */,
 				4FF690292100347500892BFF /* AppDelegate.h */,
 				4FF6902A2100347500892BFF /* AppDelegate.m */,
 				4FF6902C2100347500892BFF /* ViewController.h */,
@@ -130,6 +140,20 @@
 				4FF6904F2100347700892BFF /* Info.plist */,
 			);
 			path = DLCachePlayerDemoUITests;
+			sourceTree = "<group>";
+		};
+		4FF6905B210034A500892BFF /* DLCachePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				4FF6905D210034BB00892BFF /* DLCachePlayer.h */,
+				4FF6905C210034BA00892BFF /* DLCachePlayer.m */,
+				4FF69060210034BB00892BFF /* DLResourceLoader.h */,
+				4FF69061210034BB00892BFF /* DLResourceLoader.m */,
+				4FF6905F210034BB00892BFF /* DLProgressSlider.h */,
+				4FF6905E210034BB00892BFF /* DLProgressSlider.m */,
+			);
+			name = DLCachePlayer;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +289,9 @@
 				4FF6902E2100347500892BFF /* ViewController.m in Sources */,
 				4FF690392100347700892BFF /* main.m in Sources */,
 				4FF6902B2100347500892BFF /* AppDelegate.m in Sources */,
+				4FF69063210034BB00892BFF /* DLProgressSlider.m in Sources */,
+				4FF69064210034BB00892BFF /* DLResourceLoader.m in Sources */,
+				4FF69062210034BB00892BFF /* DLCachePlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
