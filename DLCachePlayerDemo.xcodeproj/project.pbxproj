@@ -87,6 +87,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F5EF2E421004446009259BB /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
 		4FF6901D2100347500892BFF = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +117,7 @@
 		4FF690282100347500892BFF /* DLCachePlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4F5EF2E421004446009259BB /* Sample */,
 				4FF6905B210034A500892BFF /* DLCachePlayer */,
 				4FF690292100347500892BFF /* AppDelegate.h */,
 				4FF6902A2100347500892BFF /* AppDelegate.m */,
