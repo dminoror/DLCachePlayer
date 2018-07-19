@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController<DLCachePlayerDataDelegate, DLCachePlayerStateDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *musicTable;
 - (IBAction)btnPlayPause_Clicked:(id)sender;
 
 @end

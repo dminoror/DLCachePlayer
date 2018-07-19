@@ -70,9 +70,7 @@
     if (LOG_LOCK) NSLog(@"lock shouldWaitForLoadingOfRequestedResource");
     [lock lock];
     {
-        NSLog(@"shouldWaitForLoadingOfRequestedResource");
         [self addLoadingRequest:loadingRequest];
-        NSLog(@"request count = %@", @(requestList.count));
     }
     if (LOG_LOCK) NSLog(@"unlock shouldWaitForLoadingOfRequestedResource");
     [lock unlock];
@@ -84,9 +82,7 @@
     if (LOG_LOCK) NSLog(@"lock didCancelLoadingRequest");
     [lock lock];
     {
-        NSLog(@"didCancelLoadingRequest, offset = %@, length = %@", @(loadingRequest.dataRequest.requestedOffset), @(loadingRequest.dataRequest.requestedLength));
         [requestList removeObject:loadingRequest];
-        NSLog(@"request count = %@", @(requestList.count));
     }
     if (LOG_LOCK) NSLog(@"unlock didCancelLoadingRequest");
     [lock unlock];
@@ -115,7 +111,6 @@
 
 - (void)addLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest
 {
-    NSLog(@"loading offset = %@, length = %@", @(loadingRequest.dataRequest.requestedOffset), @(loadingRequest.dataRequest.requestedLength));
     [requestList addObject:loadingRequest];
     if (finished)
     {
@@ -292,7 +287,6 @@
     NSUInteger reqEndOffset = loadingRequest.dataRequest.requestedOffset + loadingRequest.dataRequest.requestedLength;
     if (loadingRequest.dataRequest.currentOffset >= reqEndOffset)
     {
-        NSLog(@"finish a request");
         [loadingRequest finishLoading];
         return YES;
     }

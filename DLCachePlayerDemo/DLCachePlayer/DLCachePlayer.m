@@ -266,7 +266,6 @@
 
 - (void)loader:(DLResourceLoader *)loader loadingSuccess:data url:(NSURL *)url
 {
-    NSLog(@"loadingSuccess : %@", url.absoluteString);
     BOOL isCurrent = [loader isEqual:currentLoader];
     [self playerDidFinishCache:loadingPlayerItem isCurrent:isCurrent data:data];
     if (self.downloadState == DLCachePlayerDownloadStateCurrent)
@@ -277,7 +276,6 @@
 }
 - (void)loader:(DLResourceLoader *)loader loadingFailWithError:(NSError *)error url:(NSURL *)url
 {
-    NSLog(@"loadingFail : %@, error = %@", url.absoluteString, error.localizedDescription);
     BOOL isCurrent = [loader isEqual:currentLoader];
     [self playerDidFail:loadingPlayerItem isCurrent:isCurrent error:error];
     if (!isCurrent)
@@ -389,12 +387,10 @@
 
 - (void)playerItemFailedToPlayEndTime:(NSNotification *)notification
 {
-    NSLog(@"playerItemFailedToPlayEndTime, noti = %@", notification);
 }
 
 - (void)playerItemPlaybackStall:(NSNotification *)notification
 {
-    NSLog(@"playerItemPlaybackStall, noti = %@", notification);
 }
 
 #pragma mark - Delegate Callback
