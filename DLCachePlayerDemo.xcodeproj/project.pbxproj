@@ -87,6 +87,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F4481A921003C6500C12595 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
 		4FF6901D2100347500892BFF = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				4FF6905B210034A500892BFF /* DLCachePlayer */,
+				4F4481A921003C6500C12595 /* Sample */,
 				4FF690292100347500892BFF /* AppDelegate.h */,
 				4FF6902A2100347500892BFF /* AppDelegate.m */,
 				4FF6902C2100347500892BFF /* ViewController.h */,
@@ -152,8 +160,7 @@
 				4FF6905F210034BB00892BFF /* DLProgressSlider.h */,
 				4FF6905E210034BB00892BFF /* DLProgressSlider.m */,
 			);
-			name = DLCachePlayer;
-			path = "New Group";
+			path = DLCachePlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
