@@ -2,19 +2,12 @@
 </br>
 DLCachePlayer 提供播放音樂，並同時將檔案下載到本地的功能。</br>
 
-## Features：</br>
+## Features </br>
  * Support remote and local media URL. </br>
  * Buffer whole current playitem, and preload next playitem. </br>
  * Totaly seekable. </br>
  * Spoport .mp3 file. </br>
  * No playlist or queue, you can use own playlist structure. </br>
-
-## Demo
-<img src="https://i.imgur.com/wS8EIRX.gif" width="240" height="427"> Basic remote media play.
-
-<img src="https://i.imgur.com/GG6NN0X.gif" width="240" height="427">  How preload worked. When next clicked, some progress already exist.
-
-<img src="https://i.imgur.com/jO1RjT2.gif" width="240" height="427"> How seek worked. Player buffer progress after current time first.
 
  ## How to use </br>
 Implement `DLCachePlayerDataDelegate` and `DLCachePlayerStateDelegate` in your media module. </br>
@@ -95,6 +88,15 @@ Called when player state changed, may update your UI when `Stop`, `Playing` and 
 }
 ```
 </br>
+
+## Demo
+<img src="https://i.imgur.com/wS8EIRX.gif" width="240" height="427"> Basic remote media play.
+
+<img src="https://i.imgur.com/GG6NN0X.gif" width="240" height="427">  How preload worked. When next clicked, some progress already exist.
+
+<img src="https://i.imgur.com/jO1RjT2.gif" width="240" height="427"> How seek worked. Player buffer progress after current time first.</br>
+
+See more in Demo project.
 
 ## Licenses </br>
 All source code is licensed under the MIT License. </br>
