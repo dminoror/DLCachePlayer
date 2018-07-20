@@ -13,6 +13,7 @@
     DLCachePlayer * player;
     NSMutableArray * resourceList;
     NSInteger currentIndex;
+    NSTimer * progressTimer;
 }
 
 @end
@@ -39,7 +40,7 @@
     [resourceList addObject:localPlayURL];
     [self.musicTable reloadData];
     
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(progressBar_Update) userInfo:nil repeats:YES];
+    progressTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(progressBar_Update) userInfo:nil repeats:YES];
 }
 
 #pragma mark - DLCachePlayerDataDelegate
@@ -174,7 +175,10 @@
 }
 - (IBAction)progressBar_Changed:(id)sender
 {
-    [player seekToTimeInterval:(progressBar.value * [player currentDuration]) completionHandler:nil];
+    [progressTimer invalidate];
+    [player seekToTimeInterval:(progressBar.value * [player currentDuration]) completionHandler:^(BOOL finished) {
+        progressTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(progressBar_Update) userInfo:nil repeats:YES];
+    }];
 }
 - (void)progressBar_Update
 {
