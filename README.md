@@ -23,14 +23,14 @@ Implement `DLCachePlayerDataDelegate` and `DLCachePlayerStateDelegate` in your m
 
 @interface ViewController : UIViewController<DLCachePlayerDataDelegate, DLCachePlayerStateDelegate>
 ```
-set delegate for `DLCachePlayer` </br>
+Set delegate for `DLCachePlayer` </br>
 ```objective-c
 - (void)viewDidLoad 
 {
     [DLCachePlayer sharedInstance].delegate = self;
 }
 ```
-Implement `playerGetCurrentPlayURL` and `playerGetPreloadPlayURL`, reture your media URL in block.
+Implement `playerGetCurrentPlayURL` and `playerGetPreloadPlayURL`, return your media URL in block.
 ```objective-c
 - (void)playerGetCurrentPlayURL:(AVPlayerItem * (^)(NSURL * url, BOOL cache))block
 {
@@ -64,7 +64,7 @@ Implement `playerCacheProgress` and pass variables to update it's buffer progres
 }
 ```
 
-## Delegate maybe useful </br>
+## Other delegate </br>
 Called when player current playitem changed, may update your UI here. </br>
 ```objective-c
 - (void)playerPlayerItemChanged:(AVPlayerItem *)playerItem
@@ -95,3 +95,6 @@ Called when player state changed, may update your UI when `Stop`, `Playing` and 
 }
 ```
 </br>
+
+## Licenses </br>
+All source code is licensed under the MIT License. </br>
