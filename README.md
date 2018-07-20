@@ -35,7 +35,7 @@ Call `resetAndPlay` when you want to play.
 ```objective-c
 [[DLCachePlayer sharedInstance] resetAndPlay];
 ```
-Player will call `playerGetCurrentPlayURL`, play and buffer current playitem. </br>
+Player will call `playerGetCurrentPlayURL`, play the URL you return. </br>
 After buffer finish, you can get media data in `playerDidFinishCache`, save it so you can play it locally next time. </br>
 ```objective-c
 - (void)playerDidFinishCache:(AVPlayerItem *)playerItem isCurrent:(BOOL)isCurrent data:(NSData *)data
@@ -45,7 +45,7 @@ After buffer finish, you can get media data in `playerDidFinishCache`, save it s
 ```
 
 ## ProgressSlider </br>
-If you use a UISlider to show current progress, you can use `DLProgressSlider`. </br>
+If you want to show current buffer, `DLProgressSlider` maybe useful. </br>
 Implement `playerCacheProgress` and pass variables to update it's buffer progress.<\br>
 ```objective-c
 - (void)playerCacheProgress:(AVPlayerItem *)playerItem isCurrent:(BOOL)isCurrent tasks:(NSMutableArray *)tasks totalBytes:(NSUInteger)totalBytes
