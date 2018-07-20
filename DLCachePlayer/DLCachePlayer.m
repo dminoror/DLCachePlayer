@@ -182,6 +182,10 @@
                 else
                 {
                     AVURLAsset * asset = [AVURLAsset URLAssetWithURL:[self customSchemeURL:url] options:nil];
+                    if (!preloadLoader.finished)
+                    {
+                        [preloadLoader stopLoading];
+                    }
                     currentLoader = [[DLResourceLoader alloc] init];
                     currentLoader.originScheme = url.scheme;
                     currentLoader.delegate = self;
