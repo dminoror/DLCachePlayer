@@ -97,7 +97,16 @@
 {
     int32_t timeScale = self.audioPlayer.currentItem.duration.timescale;
     CMTime time = CMTimeMakeWithSeconds(timeInterval, timeScale);
-    [self.audioPlayer seekToTime:time completionHandler:completionHandler];
+    __block BOOL isPlaying = [self isPlaying];
+    if (isPlaying)
+        [self pause];
+    __block void (^weakBlock)(BOOL finished) = completionHandler;
+    __weak DLCachePlayer * weakSelf = self;
+    [self.audioPlayer seekToTime:time completionHandler:^(BOOL finished) {
+        if (isPlaying)
+            [weakSelf resume];
+        weakBlock(finished);
+    }];
 }
 
 - (BOOL)isPlaying
