@@ -369,6 +369,7 @@
     }
     else
     {
+        [lock lock];
         [self mergeTaskData];
         NSData * data = [self finishCacheData];
         if (data)
@@ -377,6 +378,7 @@
             session = nil;
             [self requestTaskDidFinishLoadingWithCache:YES data:data url:task.response.URL];
         }
+        [lock unlock];
     }
 }
 
@@ -396,7 +398,6 @@
 
 - (void)mergeTaskData
 {
-    [lock lock];
     for (NSInteger i = 0; i < tasks.count - 1; i++)
     {
         DLRequestTask * task = [tasks objectAtIndex:i];
@@ -422,7 +423,6 @@
             i--;
         }
     }
-    [lock unlock];
 }
 - (NSData *)finishCacheData
 {
