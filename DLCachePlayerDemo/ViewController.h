@@ -22,8 +22,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPrev;
 - (IBAction)btnPrev_Clicked:(id)sender;
 
-@property (weak, nonatomic) IBOutlet DLProgressSlider *progressBar;
+@property (weak, nonatomic) IBOutlet DLProgressSlider *currentProgressBar;
 - (IBAction)progressBar_Changed:(id)sender;
+@property (weak, nonatomic) IBOutlet DLProgressSlider *preloadProgressBar;
 
 @end
 

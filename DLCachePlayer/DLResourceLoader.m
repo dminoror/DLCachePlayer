@@ -383,7 +383,14 @@
 - (void)retryLoading
 {
     [lock lock];
-    [self handleLoadingRequest:[requestList lastObject]];
+    if (requestList.count > 0)
+    {
+        [self handleLoadingRequest:[requestList lastObject]];
+    }
+    else
+    {
+        [self finishCacheData];
+    }
     [lock unlock];
 }
 

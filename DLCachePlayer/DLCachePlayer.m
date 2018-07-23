@@ -34,7 +34,10 @@
         self.queueDL = dispatch_queue_create("resource_queue", dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_DEFAULT, 0));
         
         audioPlayer = [[AVPlayer alloc] init];
-        audioPlayer.automaticallyWaitsToMinimizeStalling = NO;
+        if (@available(iOS 10.0, *))
+        {
+            audioPlayer.automaticallyWaitsToMinimizeStalling = NO;
+        }
         downloadState = DLCachePlayerDownloadStateIdle;
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(playerItemDidReachEnd:)

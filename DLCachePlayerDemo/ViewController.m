@@ -19,7 +19,7 @@
 @end
 
 @implementation ViewController
-@synthesize progressBar;
+@synthesize currentProgressBar, preloadProgressBar;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,7 +63,11 @@
 {
     if (isCurrent)
     {
-        [progressBar updateProgress:tasks totalBytes:totalBytes];
+        [currentProgressBar updateProgress:tasks totalBytes:totalBytes];
+    }
+    else
+    {
+        [preloadProgressBar updateProgress:tasks totalBytes:totalBytes];
     }
 }
 
@@ -176,15 +180,15 @@
 - (IBAction)progressBar_Changed:(id)sender
 {
     [progressTimer invalidate];
-    [player seekToTimeInterval:(progressBar.value * [player currentDuration]) completionHandler:^(BOOL finished) {
+    [player seekToTimeInterval:(currentProgressBar.value * [player currentDuration]) completionHandler:^(BOOL finished) {
         progressTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(progressBar_Update) userInfo:nil repeats:YES];
     }];
 }
 - (void)progressBar_Update
 {
-    self.progressBar.value = [player currentTime] / [player currentDuration];
+    self.currentProgressBar.value = [player currentTime] / [player currentDuration];
     [player cachedProgress:player.audioPlayer.currentItem result:^(NSMutableArray *tasks, NSUInteger totalBytes) {
-        [progressBar updateProgress:tasks totalBytes:totalBytes];
+        [currentProgressBar updateProgress:tasks totalBytes:totalBytes];
     }];
 }
 
