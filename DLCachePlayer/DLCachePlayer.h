@@ -36,7 +36,6 @@ typedef NS_ENUM(NSInteger, DLCachePlayerPlayState) {
 - (void)playerCacheProgress:(AVPlayerItem *)playerItem isCurrent:(BOOL)isCurrent tasks:(NSMutableArray *)tasks totalBytes:(NSUInteger)totalBytes;
 - (void)playerDidFinishCache:(AVPlayerItem *)playerItem isCurrent:(BOOL)isCurrent data:(NSData *)data;
 - (void)playerDidFail:(AVPlayerItem *)playerItem isCurrent:(BOOL)isCurrent error:(NSError *)error;
-- (NSString *)playerTempFilePath;
 
 @end
 
@@ -60,8 +59,30 @@ typedef NS_ENUM(NSInteger, DLCachePlayerPlayState) {
 @property (nonatomic, assign, readonly) DLCachePlayerDownloadState downloadState;
 @property (nonatomic, assign, readonly) DLCachePlayerPlayState playState;
 
-@property (nonatomic, readonly) NSString * tempFilePath;
-@property (nonatomic, assign) NSInteger retryCount;
+/*!
+ @property tempFilePath
+ @abstract
+    The directory path of buffer and cache.
+ @discussion
+    Default is "../tmp/musicCache".
+    Do not change this value when playing.
+ */
+@property (nonatomic, strong) NSString * tempFilePath;
+/*!
+ @property retryCount
+ @abstract
+    retry times when download fail.
+ @discussion
+    Default is 2 times.
+ */
+@property (nonatomic, assign) NSInteger retryTimes;
+/*!
+ @property retryCount
+ @abstract
+    retry delay when download fail.
+ @discussion
+    Default is 1 second.
+ */
 @property (nonatomic, assign) CGFloat retryDelay;
 
 + (DLCachePlayer *)sharedInstance;

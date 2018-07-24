@@ -355,7 +355,7 @@
     {
         if (error.code != NSURLErrorCancelled)
         {
-            if (retryCount < [DLCachePlayer sharedInstance].retryCount)
+            if (retryCount < [DLCachePlayer sharedInstance].retryTimes)
             {
                 retryCount++;
                 retryTimer = [NSTimer timerWithTimeInterval:[DLCachePlayer sharedInstance].retryDelay target:self selector:@selector(retryLoading) userInfo:nil repeats:NO];

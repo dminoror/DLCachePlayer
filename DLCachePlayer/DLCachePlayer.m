@@ -57,10 +57,9 @@
         [self.audioPlayer addObserver:self forKeyPath:@"rate" options:0 context:nil];
         [self.audioPlayer addObserver:self forKeyPath:@"currentItem" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
         
-        self.retryCount = 2;
+        self.retryTimes = 2;
         self.retryDelay = 1;
-        tempFilePath = [NSHomeDirectory() stringByAppendingPathComponent:@"tmp"];
-        [self cleanTempFiles];
+        self.tempFilePath = [[NSHomeDirectory() stringByAppendingPathComponent:@"tmp"] stringByAppendingPathComponent:@"musicCahce"];
     }
     return self;
 }
@@ -68,11 +67,25 @@
 - (void)setDelegate:(NSObject<DLCachePlayerDataDelegate, DLCachePlayerStateDelegate> *)setDelegate
 {
     delegate = setDelegate;
-    if ([delegate respondsToSelector:@selector(playerTempFilePath)])
+}
+- (void)setTempFilePath:(NSString *)setTempFilePath
+{
+    if (self.tempFilePath)
     {
-        tempFilePath = [delegate playerTempFilePath];
-        [self cleanTempFiles];
+        [[NSFileManager defaultManager] removeItemAtPath:self.tempFilePath error:nil];
     }
+    BOOL isDir = YES;
+    if (![[NSFileManager defaultManager] fileExistsAtPath:setTempFilePath isDirectory:&isDir])
+    {
+        NSError * error;
+        [[NSFileManager defaultManager] createDirectoryAtPath:setTempFilePath withIntermediateDirectories:YES attributes:nil error:&error];
+        if (error)
+        {
+            return;
+        }
+    }
+    tempFilePath = setTempFilePath;
+    
 }
 
 #pragma mark - Player Method
@@ -269,17 +282,6 @@
     NSURLComponents * components = [[NSURLComponents alloc] initWithURL:url resolvingAgainstBaseURL:NO];
     components.scheme = @"cache";
     return [components URL];
-}
-
-- (void)cleanTempFiles
-{
-    NSArray * files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:tempFilePath error:nil];
-    for (NSString * file in files)
-    {
-        NSString * filePath = [tempFilePath stringByAppendingPathComponent:file];
-        NSError * error;
-        [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
-    }
 }
 
 #pragma mark - DLResourceLoader Delegate
