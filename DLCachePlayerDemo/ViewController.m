@@ -34,6 +34,7 @@
     NSURL * alacPlayURL = [NSURL URLWithString:@"https://raw.githubusercontent.com/dohProject/DLCachePlayer/master/DLCachePlayerDemo/Sample/3.%20Departures%20(alac%20file).m4a"];
     NSURL * localPlayURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"4. The Glory Days" ofType:@"mp3"]];
     /// local file must use  [NSURL fileURLWithPath:]
+    
     [resourceList addObject:mp3PlayURL];
     [resourceList addObject:m4aPlayURL];
     [resourceList addObject:alacPlayURL];
