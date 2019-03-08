@@ -62,26 +62,26 @@ typedef NS_ENUM(NSInteger, DLCachePlayerPlayState) {
 /*!
  @property tempFilePath
  @abstract
-    The directory path of buffer and cache.
+ The directory path of buffer and cache.
  @discussion
-    Default is "../tmp/musicCache".
-    Do not change this value when playing.
+ Default is "../tmp/musicCache".
+ Do not change this value when playing.
  */
 @property (nonatomic, strong) NSString * tempFilePath;
 /*!
  @property retryCount
  @abstract
-    retry times when download fail.
+ retry times when download fail.
  @discussion
-    Default is 2 times.
+ Default is 2 times.
  */
 @property (nonatomic, assign) NSInteger retryTimes;
 /*!
  @property retryCount
  @abstract
-    retry delay when download fail.
+ retry delay when download fail.
  @discussion
-    Default is 1 second.
+ Default is 1 second.
  */
 @property (nonatomic, assign) CGFloat retryDelay;
 

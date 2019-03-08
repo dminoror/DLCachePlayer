@@ -57,7 +57,7 @@
         [self.audioPlayer addObserver:self forKeyPath:@"rate" options:0 context:nil];
         [self.audioPlayer addObserver:self forKeyPath:@"currentItem" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
         
-        self.retryTimes = 2;
+        self.retryTimes = 3;
         self.retryDelay = 1;
         self.tempFilePath = [[NSHomeDirectory() stringByAppendingPathComponent:@"tmp"] stringByAppendingPathComponent:@"musicCahce"];
     }
@@ -96,7 +96,11 @@
 }
 - (void)pause
 {
-    [self.audioPlayer pause];
+    if (playState == DLCachePlayerPlayStatePlaying)
+    {
+        [self.audioPlayer pause];
+        [self playerDidPlayStateChanged:DLCachePlayerPlayStatePause];
+    }
 }
 - (void)resume
 {
@@ -105,9 +109,16 @@
 - (void)stop
 {
     [self.audioPlayer pause];
-    [self seekToTimeInterval:0 completionHandler:^(BOOL finished) {
+    if (self.audioPlayer.currentItem)
+    {
+        [self seekToTimeInterval:0 completionHandler:^(BOOL finished) {
+            [self playerDidPlayStateChanged:DLCachePlayerPlayStateStop];
+        }];
+    }
+    else
+    {
         [self playerDidPlayStateChanged:DLCachePlayerPlayStateStop];
-    }];
+    }
 }
 - (void)seekToTimeInterval:(NSTimeInterval)timeInterval completionHandler:(void (^)(BOOL finished))completionHandler
 {
@@ -121,7 +132,7 @@
     [self.audioPlayer seekToTime:time completionHandler:^(BOOL finished) {
         if (isPlaying)
             [weakSelf resume];
-        weakBlock(finished);
+        SAFE_BLOCK(weakBlock, finished);
     }];
 }
 
@@ -198,6 +209,10 @@
                     currentLoader = ((DLResourceLoader *)((AVURLAsset *)loadingPlayerItem.asset).resourceLoader.delegate);
                     [audioPlayer replaceCurrentItemWithPlayerItem:loadingPlayerItem];
                     [audioPlayer play];
+                    if ([self currentTime] > 0)
+                    {
+                        [self seekToTimeInterval:0 completionHandler:nil];
+                    }
                     if (currentLoader.finished)
                     {
                         [weakSelf setupPreloadPlayerItem];
@@ -324,11 +339,7 @@
     {
         if (self.audioPlayer.status == AVPlayerStatusReadyToPlay)
         {
-            //[self playerReadyToPlay];
-            if (![self isPlaying])
-            {
-                [self.audioPlayer play];
-            }
+            //[self.audioPlayer play];
         }
         else if (self.audioPlayer.status == AVPlayerStatusFailed)
         {
@@ -342,8 +353,6 @@
         {
             if (isPlaying)
                 [self playerDidPlayStateChanged:DLCachePlayerPlayStatePlaying];
-            else
-                [self playerDidPlayStateChanged:DLCachePlayerPlayStatePause];
         }
         [self playerPlayingChanged:isPlaying];
     }
@@ -378,27 +387,21 @@
         {
             [self playerReadyToPlay];
             [self playerDidPlayStateChanged:DLCachePlayerPlayStateReady];
-            if (![self isPlaying])
-            {
-                [self.audioPlayer play];
-            }
-            else
-            {
-                [self playerDidPlayStateChanged:DLCachePlayerPlayStatePlaying];
-            }
+            [self.audioPlayer play];
         }
     }
     /*
-    if ([keyPath isEqualToString:@"loadedTimeRanges"] && self.audioPlayer.currentItem)
-    {
-        NSArray *timeRanges = (NSArray *)[change objectForKey:NSKeyValueChangeNewKey];
-        if (timeRanges && [timeRanges count])
-        {
-            CMTimeRange timerange = [[timeRanges objectAtIndex:0] CMTimeRangeValue];
-            CMTime time = CMTimeAdd(timerange.start, timerange.duration);
-            //[self playerCurrentItemLoading:time];
-        }
-    }*/
+     if ([keyPath isEqualToString:@"loadedTimeRanges"] && self.audioPlayer.currentItem)
+     {
+     NSArray *timeRanges = (NSArray *)[change objectForKey:NSKeyValueChangeNewKey];
+     if (timeRanges && [timeRanges count])
+     {
+     CMTimeRange timerange = [[timeRanges objectAtIndex:0] CMTimeRangeValue];
+     CMTime time = CMTimeAdd(timerange.start, timerange.duration);
+     NSLog(@"loadedRanged = %@", @(time.value / time.timescale));
+     //[self playerCurrentItemLoading:time];
+     }
+     }*/
 }
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification
@@ -413,6 +416,7 @@
 
 - (void)playerItemPlaybackStall:(NSNotification *)notification
 {
+    
 }
 
 #pragma mark - Delegate Callback
