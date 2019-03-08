@@ -111,14 +111,14 @@
 
 - (void)addLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest
 {
-    BOOL skipNewTask = NO;
+    BOOL canCutLine = YES;
     if (loadingRequest.dataRequest.requestsAllDataToEndOfResource)
     {
         for (AVAssetResourceLoadingRequest * request in requestList)
         {
             if (!request.dataRequest.requestsAllDataToEndOfResource)
             {
-                skipNewTask = YES;
+                canCutLine = NO;
             }
         }
     }
@@ -137,7 +137,7 @@
         [task.fileHandle closeFile];
         return;
     }
-    if (!skipNewTask)
+    if (canCutLine)
         [self handleLoadingRequest:loadingRequest];
 }
 - (void)handleLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest
